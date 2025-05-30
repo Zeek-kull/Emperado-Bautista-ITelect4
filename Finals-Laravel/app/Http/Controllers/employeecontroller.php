@@ -24,5 +24,15 @@ class employeecontroller extends Controller
             // employee::findOrFail($id)->update($request->all());
             // return redirect ()->back()->with('status','Employee Updated Successfully!');
             // }
+    public function edit(int$id){
+        $employees=employee::find($id);
+        return view ('employee.edit', compact ('employees'))
+    }
+    public function update(Request $request, int $id){{
+        $request->compact,([]);
+        $employees::findOrFail($id)->update($request->all());
 
+    punlic function destroy(){
+    }}
 }
+
